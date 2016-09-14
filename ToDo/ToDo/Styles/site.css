@@ -1,4 +1,4 @@
-﻿html {
+html {
 	background: #e8e8e8;
 }
 
@@ -22,7 +22,7 @@ th {
 	color: #988B8B;
 }
 
-.input__field {
+.input_field {
 	position: relative;
 	display: block;
 	float: right;
@@ -37,12 +37,7 @@ th {
 	-webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
-/*.input__field--kyo:focus {
-	z-index: 10000;
-	color: #fff;
-	opacity: 1;
-}*/
-.input__field--kyo {
+.input_field_text {
 	padding: 0.85em 1.5em;
 	width: 100%;
 	border-radius: 2em;
@@ -60,7 +55,7 @@ th {
 	border-color: #AAB3BB; 
 }
 
-.ph-button {
+.ph-btn {
     border-style: solid;
     border-width: 0px 0px 3px;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
@@ -81,7 +76,7 @@ th {
     font-size: 18px;
 }
 
-.elegant{background-image:url(http://csscheckbox.com/checkboxes/elegant.png);}
+.strict-checkbox{background-image:url(http://csscheckbox.com/checkboxes/elegant.png);}
 
 input[type=checkbox] {
     height: 20px;
@@ -90,7 +85,7 @@ input[type=checkbox] {
 
 .loading-img {
     display: none;
-    margin-left: 100px;
+    margin-left: 45%;
     background-image: url(../Content-loading/loading.gif);
     background-size: cover;
     width: 128px;
