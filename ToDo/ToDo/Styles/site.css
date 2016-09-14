@@ -1,0 +1,89 @@
+﻿html {
+	background: #e8e8e8;
+}
+
+.table {
+	margin: auto;
+	width: 30%;
+	border: 3px solid green;
+	padding: 10px;
+	border-width: 5px;
+	border-color: #B9C1CA;
+	border-radius: 4px;
+}
+
+th {
+	font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	color: #988B8B;
+}
+
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #aaa;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+/*.input__field--kyo:focus {
+	z-index: 10000;
+	color: #fff;
+	opacity: 1;
+}*/
+.input__field--kyo {
+	padding: 0.85em 1.5em;
+	width: 100%;
+	border-radius: 2em;
+	background: #fff;
+	color: #535d92;
+}
+
+.ph-btn-blue {
+	 background-color: #C6CCD2;
+	 border-color: #AAB3BB;
+}
+
+.ph-btn-blue:hover, .ph-btn-blue:focus, .ph-btn-blue:active {
+	background-color: #B8BFC7;
+	border-color: #AAB3BB; 
+}
+
+.ph-button {
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    height: 39px;
+    width: 102px;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center; 
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    font-size: 18px;
+}
+
+.elegant{background-image:url(http://csscheckbox.com/checkboxes/elegant.png);}
+
+input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+}
