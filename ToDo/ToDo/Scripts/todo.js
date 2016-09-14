@@ -21,7 +21,6 @@
         });
     };
 
-    
     //display locally created tasks on form
     var dispalyLocalTasks = function(parentSelector, tasks) {
         $.each(tasks, function(i, item) {
@@ -180,7 +179,7 @@ $(function () {
         var isCompleted = $('#newCompleted')[0].checked;
         var name = $('#newName')[0].value;
         var localguid = tasksManager.guid();
-        var t = { LocalToDoId : localguid, IsCompleted :isCompleted, Name : name, UserId: 43, Delete : false , Update :0}
+        var t = { LocalToDoId: localguid, IsCompleted: isCompleted, Name: name, UserId: $.cookie("user"), Delete: false, Update: 0 }
         localStorage.setItem(localguid, JSON.stringify(t));
         tasksManager.addTaskFromLocalStorage("#tasks > tbody", t);
 
@@ -220,7 +219,7 @@ $(function () {
                 localStorage.setItem(localTask.LocalToDoId, JSON.stringify(localTask));
             }
         } else {
-            localTask = { ToDoId: taskId, LocalToDoId: tasksManager.guid(), IsCompleted: isCompleted, Name: name, UserId: 43, Event: 'update' };
+            localTask = { ToDoId: taskId, LocalToDoId: tasksManager.guid(), IsCompleted: isCompleted, Name: name, UserId: $.cookie("user"), Event: 'update' };
             localStorage.setItem(localTask.LocalToDoId, JSON.stringify(localTask));
 
             tasksManager.updateTask(taskId, isCompleted, name)
@@ -254,12 +253,13 @@ $(function () {
     });
     //localStorage.clear();
 
-
     //load from start
+    $('#loading').show();
     tasksManager.loadTasks()
         .done(function(tasks) {
             tasksManager.displayTasks("#tasks > tbody", tasks);
-                return tasks;
+            $('#loading').hide();
+            return tasks;
             }
         ).then(function(tasks) {
             var localTasks = tasksManager.getAllMemoryTasks(); 
