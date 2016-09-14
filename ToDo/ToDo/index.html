@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>ToDo list</title>
@@ -11,23 +11,24 @@
     <script src="Scripts/jquery.cookie-1.4.1.min.js" language="javascript"></script>
 </head>
 <body>
-
-<table id="tasks">
-    <thead>
-    <tr>
-        <th>Completed</th>
-        <th>Task</th>
-        <th>Actions</th>
-    </tr>
-    <!-- The row for creating new items. -->
-    <tr id="new">
-        <td><input type='checkbox' id="newCompleted"/></td>
-         <td><input type='text' class="input_field input_field_text" id="newName" /></td>
-         <td><input type='button' class="ph-btn ph-btn-blue" id="newCreate" value='Create' /></td>
-    </tr>
-    </thead>
-    <tbody></tbody>
-</table>
+    <div class="table">
+        <table id="tasks">
+            <thead>
+                <tr>
+                    <th>Completed</th>
+                    <th>Task</th>
+                    <th>Actions</th>
+                </tr>
+                <!-- The row for creating new items. -->
+                <tr id="new">
+                    <td><input type='checkbox' id="newCompleted" class="strict-checkbox" /></td>
+                    <td><input type='text' class="input_field input_field_text" id="newName" /></td>
+                    <td><input type='button' class="ph-btn ph-btn-blue" id="newCreate" value='Create' /></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
     <div id="loading" class="loading-img">
     </div>
 </body>
